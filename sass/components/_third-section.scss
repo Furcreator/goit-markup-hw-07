@@ -1,0 +1,36 @@
+
+.ocup-title {
+  margin-bottom: 50px;
+  color: $primary-text-color;
+  font-size: 36px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.occupation-list {
+  display: flex;
+}
+
+.occupation-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.occupation-info {
+  position: relative;
+}
+
+.occupation-list__text {
+  padding: 27px 0;
+  background-color: rgba(47, 48, 58, 0.8);
+  width: 370px;
+  position: absolute;
+  bottom: 4px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $font-color;
+}

@@ -1,0 +1,41 @@
+
+.hang {
+  padding-bottom: 0;
+}
+
+.hang-list {
+  display: flex;
+}
+
+.hang-list__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.hang-list__title {
+  color: $primary-text-color;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+
+.hang-list__text {
+  color: $duo-text-color;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* hang-icon */
+.hang-icon {
+  background: $color-filters;
+  border-radius: 4px;
+  width: 270px;
+  height: 120px;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+}
+
+.hang-icon__item {
+  width: 70px;
+  height: 70px;
+}
