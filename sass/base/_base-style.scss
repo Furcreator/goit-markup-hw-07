@@ -56,16 +56,49 @@ header > a {
 /* КОНТЕЙНЕР */
 
 .container {
-  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
+
+  @include minW-Phone {
+    width: 480px;
+  }
+
+  @include minW-Tablet {
+    width: 768px;
+  }
+
+  @include minW-Dt {
+    width: 1200px;
+  }
 }
 
 .section {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include minW-Dt {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  color: $primary-text-color;
+  font-size: 28px;
+  line-height: 1.1785;
+  text-align: center;
+
+  @include minW-Dt {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.1666;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }

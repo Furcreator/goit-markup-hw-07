@@ -9,27 +9,34 @@
   background-position: center;
   background-color: $color-futter;
   color: $font-color;
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 200px 0;
+   padding: 118px 0;
 
   letter-spacing: 0.06em;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
-  text-align: center;
+
+  @include minW-Dt {
+    padding: 200px 0;
+    font-size: 44px;
+  }
 
   &__hero {
     margin: 0 auto 30px;
 
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.3636;
     text-transform: uppercase;
-    max-width: 696px;
+    max-width: 360px;
+
+
+    @include minW-Dt {
+      font-size: 44px;
+      max-width: 696px;
+    }
   }
 
   &__button {

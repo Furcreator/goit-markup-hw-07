@@ -72,18 +72,56 @@ header > a {
 
 /* КОНТЕЙНЕР */
 .container {
-  max-width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
 }
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+}
 
 .section {
-  padding: 94px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .title {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+  color: #212121;
+  font-size: 28px;
+  line-height: 1.1785;
+  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    margin-bottom: 50px;
+    font-size: 36px;
+    line-height: 1.1666;
+  }
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .form-button,
@@ -273,25 +311,33 @@ header > a {
   background-position: center;
   background-color: #2f303a;
   color: #ffffff;
-  max-width: 1600px;
-  margin-right: auto;
-  margin-left: auto;
-  padding: 200px 0;
+  padding: 118px 0;
   letter-spacing: 0.06em;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.4;
   text-align: center;
   text-transform: uppercase;
-  text-align: center;
+}
+@media screen and (min-width: 1200px) {
+  .hat {
+    padding: 200px 0;
+    font-size: 44px;
+  }
 }
 .hat__hero {
   margin: 0 auto 30px;
   font-weight: 900;
-  font-size: 44px;
+  font-size: 26px;
   line-height: 1.3636;
   text-transform: uppercase;
-  max-width: 696px;
+  max-width: 360px;
+}
+@media screen and (min-width: 1200px) {
+  .hat__hero {
+    font-size: 44px;
+    max-width: 696px;
+  }
 }
 .hat__button {
   display: block;
@@ -317,17 +363,35 @@ header > a {
   background-color: #188ce8;
 }
 
-.hang {
-  padding-bottom: 0;
-}
-
 .hang-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.hang-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 480px) {
+  .hang-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .hang-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hang-list {
+    gap: 30px;
+  }
+  .hang-list__item {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hang-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
 }
 .hang-list__title {
   color: #212121;
@@ -335,6 +399,11 @@ header > a {
   line-height: 1.14;
   text-transform: uppercase;
   padding-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .hang-list__title {
+    text-align: center;
+  }
 }
 .hang-list__text {
   color: #757575;
@@ -346,22 +415,43 @@ header > a {
 .hang-icon {
   background: #f5f4fa;
   border-radius: 4px;
-  width: 270px;
-  height: 120px;
-  padding: 25px 100px;
   margin-bottom: 30px;
+  height: 120px;
 }
 .hang-icon__item {
   width: 70px;
   height: 70px;
 }
+@media screen and (min-width: 480px) {
+  .hang-icon {
+    width: 450px;
+    padding: 25px 190px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .hang-icon {
+    width: 354px;
+    padding: 25px 142px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hang-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 270px;
+    padding: 25px 100px;
+  }
+}
 
-.ocup-title {
-  margin-bottom: 50px;
-  color: #212121;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
+.occupation-visible {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .occupation-visible {
+    display: contents;
+    padding-bottom: 94px;
+  }
 }
 
 .occupation-info {
@@ -373,6 +463,9 @@ header > a {
   display: -ms-flexbox;
   display: flex;
 }
+.occupation-list__item {
+  padding-bottom: 94px;
+}
 .occupation-list__item:not(:last-child) {
   margin-right: 30px;
 }
@@ -381,7 +474,7 @@ header > a {
   background-color: rgba(47, 48, 58, 0.8);
   width: 370px;
   position: absolute;
-  bottom: 4px;
+  bottom: 94px;
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -392,21 +485,43 @@ header > a {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 88px;
   background-color: #f5f4fa;
-}
-.team__title {
-  color: #212121;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
 }
 
 .team-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (min-width: 480px) {
+  .team-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .team-list {
+    gap: 30px;
+  }
+  .team-list__item:not(:last-child) {
+    margin-bottom: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  .team-list__item:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 30px;
+  }
 }
 .team-list__title {
   color: #212121;
@@ -420,9 +535,6 @@ header > a {
   font-size: 16px;
   line-height: 1.2;
   text-align: center;
-}
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
 }
 .team-list__item {
   background-color: #ffffff;
@@ -479,13 +591,6 @@ header > a {
   fill: #ffffff;
 }
 
-.clients-title {
-  color: #212121;
-  font-size: 36px;
-  line-height: 1.2;
-  text-align: center;
-}
-
 .clients-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -494,15 +599,38 @@ header > a {
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media screen and (min-width: 480px) {
+  .clients-list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 30px;
+  }
+}
 .clients-list__link {
   display: inline-block;
-  width: 170px;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  padding: 16px 32px;
   -webkit-transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 480px) {
+  .clients-list__link {
+    width: 210px;
+    padding: 16px 52px;
+  }
+}
+@media screen and (min-width: 769px) {
+  .clients-list__link {
+    width: 226px;
+    padding: 16px 60px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list__link {
+    width: 170px;
+    padding: 16px 32px;
+  }
 }
 .clients-list__icon {
   fill: #757575;
