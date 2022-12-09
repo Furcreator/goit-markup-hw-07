@@ -595,15 +595,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 @media screen and (min-width: 480px) {
   .clients-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     gap: 30px;
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients-list {
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
   }
 }
 .clients-list__link {
@@ -638,9 +642,6 @@ img {
   height: 60px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.clients-list .clients-list__item:not(:last-child) {
-  margin-right: 30px;
 }
 .clients-list__link:hover .clients-list__icon, .clients-list__link:focus .clients-list__icon {
   fill: #2196f3;
